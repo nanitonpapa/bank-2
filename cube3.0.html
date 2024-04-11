@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>H-BANK</title>
+  <title>H-CUBE</title>
   <style>
     body {
       background-color: black;
@@ -11,10 +11,13 @@
       padding: 0;
     }
 
-    h1 {
-      color: white;
-      text-align: center;
-      margin-top: 50px;
+    @keyframes turn {
+      from {
+        transform: rotate3d(0, 0, 0, 0);
+      }
+      to {
+        transform: rotate3d(1, 1, 0, 360deg);
+      }
     }
 
     .cube {
@@ -23,7 +26,7 @@
       position: relative;
       transform-style: preserve-3d;
       animation: turn 5s linear infinite;
-      margin: 50px auto;
+      margin: 100px auto;
     }
 
     .face {
@@ -69,19 +72,9 @@
       transform: translateY(100px) rotateX(-90deg);
       border-bottom: none; /* Supprime le bord en bas */
     }
-
-    @keyframes turn {
-      from {
-        transform: rotate3d(0, 0, 0, 0);
-      }
-      to {
-        transform: rotate3d(1, 1, 0, 360deg);
-      }
-    }
   </style>
 </head>
 <body>
-  <h1>H-BANK</h1>
   <div class="cube">
     <div class="face front">H-BANK</div>
     <div class="face back">H-BANK</div>
